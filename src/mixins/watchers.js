@@ -25,6 +25,12 @@ const mixin = {
 				const { rtl } = this.settings
 				const dragDistance = this.dragDistance * (rtl ? -1 : 1)
 
+				//Disable dragging if swipe distance is zero
+				if(this.swipeDistance === 0){
+					this.disableScroll();
+					return;
+				}
+				
 				if (dragDistance > this.swipeDistance && this.canGoToPrev) {
 					this.goToPrev()
 					this.handleMouseUp()
