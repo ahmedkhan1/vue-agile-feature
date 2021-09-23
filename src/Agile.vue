@@ -20,7 +20,7 @@
 					ref="slidesClonedBefore"
 					class="agile__slides agile__slides--cloned"
 				>
-					<slot />
+					<slot name="before" />
 				</div>
 
 				<div
@@ -35,7 +35,7 @@
 					ref="slidesClonedAfter"
 					class="agile__slides agile__slides--cloned"
 				>
-					<slot />
+					<slot name="after" />
 				</div>
 			</div>
 		</div>
